@@ -1,5 +1,11 @@
-const getAbsentDays ={
-    absentDays: '9 days'
+const details = require('../utils/data')
+
+function getAbsentDays (req, res) {
+    try {
+        res.send('Absent Days: ' +  details.absentDays)
+    } catch (e) {
+        res.send(400).send(e)
+    }
 }
 
-module.exports = getAbsentDays
+module.exports.getAbsentDays = getAbsentDays

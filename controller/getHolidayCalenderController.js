@@ -1,5 +1,13 @@
-const getholidayCalender = {
-    holidayCalender: ['15th August / Sunday - Independence Day', '10th September / Friday - Ganesh Chaturthi', '2nd October / Saturday - Gandhi Jayanti']
+const details = require('../utils/data')
+
+function getHolidayCalender
+(req, res) {
+    try {
+        tempObj = details.holidayCalender
+        res.send('Holiday Calender: ' + (JSON.stringify(tempObj)))
+    } catch (e) {
+        res.send(400).send(e)
+    }
 }
 
-module.exports = getholidayCalender
+module.exports.getHolidayCalender = getHolidayCalender

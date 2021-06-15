@@ -1,5 +1,12 @@
-const getAbsentDetails = {
-    absentDetails: ['1/6/2021', '2/6/2021', '3/6/2021', '4/6/2021']
+const details = require('../utils/data')
+
+function getAbsentDetails
+(req, res) {
+    try {
+        res.send('Absent Details: ' + details.absentDetails)
+    } catch (e) {
+        res.send(400).send(e)
+    }
 }
 
-module.exports = getAbsentDetails
+module.exports.getAbsentDetails = getAbsentDetails
