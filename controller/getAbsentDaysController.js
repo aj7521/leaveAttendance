@@ -1,4 +1,4 @@
-const details = require('../utils/data')
+const details = require('../test/data')
 
 function getAbsentDays (req, res) {
     try {
